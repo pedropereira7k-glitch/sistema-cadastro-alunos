@@ -1,0 +1,14 @@
+/home/pedro/Documentos/sistema-cadastro-alunos/obj/Debug/net10.0/sistema-cadastro-alunos.GeneratedMSBuildEditorConfig.editorconfig
+/home/pedro/Documentos/sistema-cadastro-alunos/obj/Debug/net10.0/sistema-cadastro-alunos.AssemblyInfoInputs.cache
+/home/pedro/Documentos/sistema-cadastro-alunos/obj/Debug/net10.0/sistema-cadastro-alunos.AssemblyInfo.cs
+/home/pedro/Documentos/sistema-cadastro-alunos/obj/Debug/net10.0/sistema-cadastro-alunos.csproj.CoreCompileInputs.cache
+/home/pedro/Documentos/sistema-cadastro-alunos/bin/Debug/net10.0/sistema-cadastro-alunos
+/home/pedro/Documentos/sistema-cadastro-alunos/bin/Debug/net10.0/sistema-cadastro-alunos.deps.json
+/home/pedro/Documentos/sistema-cadastro-alunos/bin/Debug/net10.0/sistema-cadastro-alunos.runtimeconfig.json
+/home/pedro/Documentos/sistema-cadastro-alunos/bin/Debug/net10.0/sistema-cadastro-alunos.dll
+/home/pedro/Documentos/sistema-cadastro-alunos/bin/Debug/net10.0/sistema-cadastro-alunos.pdb
+/home/pedro/Documentos/sistema-cadastro-alunos/obj/Debug/net10.0/sistema-cadastro-alunos.dll
+/home/pedro/Documentos/sistema-cadastro-alunos/obj/Debug/net10.0/refint/sistema-cadastro-alunos.dll
+/home/pedro/Documentos/sistema-cadastro-alunos/obj/Debug/net10.0/sistema-cadastro-alunos.pdb
+/home/pedro/Documentos/sistema-cadastro-alunos/obj/Debug/net10.0/sistema-cadastro-alunos.genruntimeconfig.cache
+/home/pedro/Documentos/sistema-cadastro-alunos/obj/Debug/net10.0/ref/sistema-cadastro-alunos.dll
