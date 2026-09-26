@@ -6,12 +6,14 @@ namespace SistemaCadastroAlunos;
 
 class Aluno
 {
+    public string Matricula { get; set; }
     public string Nome { get; set; }
     public int Idade { get; set; }
     public double Nota { get; set; }
 
-    public Aluno(string nome, int idade, double nota)
+    public Aluno(string nome, int idade, double nota, string matricula)
     {
+        Matricula = matricula;
         Nome = nome;
         Idade = idade;
         Nota = nota;
@@ -19,7 +21,9 @@ class Aluno
 
     public void ExibirInfo()
     {
-        Console.WriteLine($"Nome: {Nome} | Idade: {Idade} | Nota: {Nota:F2}");
+        Console.WriteLine(
+            $"Matricula: {Matricula} | Nome: {Nome} | Idade: {Idade} | Nota: {Nota:F2}"
+        );
     }
 }
 
@@ -81,6 +85,22 @@ class Program
     // Cadastro de aluno
     static void CadastrarAluno(List<Aluno> alunos)
     {
+        Console.Write("Matrícula: ");
+        string matricula = Console.ReadLine() ?? "";
+
+        while (string.IsNullOrWhiteSpace(matricula))
+        {
+            Console.Write("A matrícula não pode ser vazia. Tente novamente: ");
+            matricula = Console.ReadLine() ?? "";
+        }
+        foreach (var aluno in alunos)
+        {
+            if (aluno.Matricula.Equals(matricula, StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Já existe um aluno cadastrado com essa matrícula.");
+                return;
+            }
+        }
         Console.Write("Nome: ");
         string nome = Console.ReadLine() ?? "";
 
@@ -111,7 +131,7 @@ class Program
             entradaNota = Console.ReadLine() ?? "";
         }
 
-        alunos.Add(new Aluno(nome, idade, nota));
+        alunos.Add(new Aluno(nome, idade, nota, matricula));
         Console.WriteLine("Aluno cadastrado com sucesso!");
     }
 
@@ -235,25 +255,29 @@ class Program
             Console.WriteLine("Nenhum aluno cadastrado.");
             return;
         }
+        List<Aluno> alunosComMaiorNota = new List<Aluno>();
 
         double maiorNota = alunos[0].Nota;
         foreach (var aluno in alunos)
         {
             if (aluno.Nota > maiorNota)
             {
+                alunosComMaiorNota.Clear();
                 maiorNota = aluno.Nota;
+                alunosComMaiorNota.Add(aluno);
+            }
+            if (aluno.Nota == maiorNota)
+            {
+                alunosComMaiorNota.Add(aluno);
             }
         }
 
         Console.WriteLine($"A maior nota cadastrada foi: {maiorNota:F2}");
         Console.WriteLine("Aluno(s) com essa nota:");
 
-        foreach (var aluno in alunos)
+        foreach (var aluno in alunosComMaiorNota)
         {
-            if (aluno.Nota == maiorNota)
-            {
-                aluno.ExibirInfo();
-            }
+            aluno.ExibirInfo();
         }
     }
 }
