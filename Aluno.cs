@@ -20,7 +20,7 @@ public class Aluno
     public void ExibirInfo()
     {
         Console.WriteLine(
-            $"Matrŕcula: {Matricula} | Nome: {Nome} | Idade: {Idade} | Nota: {Nota:F2}"
+            $"Matrícula: {Matricula} | Nome: {Nome} | Idade: {Idade} | Nota: {Nota:F2}"
         );
     }
 }
