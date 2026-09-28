@@ -4,29 +4,6 @@ using System.Globalization;
 
 namespace SistemaCadastroAlunos;
 
-class Aluno
-{
-    public string Matricula { get; set; }
-    public string Nome { get; set; }
-    public int Idade { get; set; }
-    public double Nota { get; set; }
-
-    public Aluno(string nome, int idade, double nota, string matricula)
-    {
-        Matricula = matricula;
-        Nome = nome;
-        Idade = idade;
-        Nota = nota;
-    }
-
-    public void ExibirInfo()
-    {
-        Console.WriteLine(
-            $"Matricula: {Matricula} | Nome: {Nome} | Idade: {Idade} | Nota: {Nota:F2}"
-        );
-    }
-}
-
 class Program
 {
     static void Main(string[] args)
@@ -131,7 +108,7 @@ class Program
             entradaNota = Console.ReadLine() ?? "";
         }
 
-        alunos.Add(new Aluno(nome, idade, nota, matricula));
+        alunos.Add(new Aluno(matricula, nome, nota, idade));
         Console.WriteLine("Aluno cadastrado com sucesso!");
     }
 
