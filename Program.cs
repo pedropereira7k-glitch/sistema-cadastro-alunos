@@ -187,7 +187,7 @@ class Program
         }
 
         Aluno? alunoEncontrado = alunos.Find(a =>
-            a.Nome.Equals(alunoRemover, StringComparison.OrdinalIgnoreCase)
+            string.Equals(a.Nome, alunoRemover, StringComparison.OrdinalIgnoreCase)
         );
 
         if (alunoEncontrado != null)
